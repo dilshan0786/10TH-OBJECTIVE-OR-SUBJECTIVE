@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSEB Class 10th Objective Preparation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>BSEB Class 10th Objective Preparation</h1>
+    </header>
+
+    <div class="main-container">
+        <!-- Main Menu -->
+        <nav class="menu">
+            <button class="menu-button" onclick="showSection('previous')">Previous Year Question Practice</button>
+            <button class="menu-button" onclick="showSection('test')">Test</button>
+        </nav>
+
+        <!-- Live Score Counter -->
+        <div id="score" class="score-container" style="display:none;">
+            <span class="score">Correct: <span id="correct-count">0</span></span> 
+            | 
+            <span class="score">Wrong: <span id="wrong-count">0</span></span>
+        </div>
+
+        <!-- Sections -->
+        <section id="previous" class="content-section" style="display:none;">
+            <h2>Previous Year Question Practice</h2>
+            <div class="subject-selection">
+                <button onclick="loadQuestions('science', 'previous')">Science</button>
+                <button onclick="loadQuestions('math', 'previous')">Math</button>
+                <button onclick="loadQuestions('socialScience', 'previous')">Social Science</button>
+                <button onclick="loadQuestions('urdu', 'previous')">Urdu</button>
+                <button onclick="loadQuestions('hindi', 'previous')">Hindi</button>
+                <button onclick="loadQuestions('english', 'previous')">English</button>
+            </div>
+            <div id="question-container" class="question-container"></div>
+        </section>
+
+        <section id="test" class="content-section" style="display:none;">
+            <h2>Test</h2>
+            <div class="subject-selection">
+                <button onclick="loadTestRemember('science', 'allChapters', 'test')">Science - All Chapters</button>
+                <button onclick="loadTestRemember('science', 'chapter1', 'test')">Science - Chapter 1</button>
+                <button onclick="loadTestRemember('science', 'chapter2', 'test')">Science - मानव नेत्र तथा रंग-बिरंगा संसार</button>
+                <button onclick="loadTestRemember('math', 'allChapters', 'test')">Math - All Chapters</button>
+                <button onclick="loadTestRemember('math', 'chapter1', 'test')">Math - Chapter 1</button>
+                <button onclick="loadTestRemember('urdu', 'allChapters', 'test')">Urdu - All Chapters</button>
+                <button onclick="loadTestRemember('urdu', 'chapter1', 'test')">Urdu - Chapter 1</button>
+                <!-- Add similar buttons for other subjects -->
+            </div>
+            <div id="test-container" class="question-container"></div>
+        </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
