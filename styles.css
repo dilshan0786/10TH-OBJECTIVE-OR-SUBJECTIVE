@@ -6,10 +6,13 @@ body {
     padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
-
 body {
-    font-family: 'Noto Nastaliq Urdu', serif;
+    font-family: 'Noto Nastaliq Urdu', 'Arial', sans-serif;
+}
+
+.urdu-text {
+    direction: rtl;
+    text-align: right;
 }
 
 
@@ -106,6 +109,7 @@ body {
     width: 100%;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: 'Noto Nastaliq Urdu', 'Arial', sans-serif;
 }
 
 .option-button:hover {
