@@ -69,6 +69,9 @@ function displayQuestions(questions, containerId) {
     });
 
     document.getElementById('score').style.display = 'block';
+
+    // Re-render MathJax
+  MathJax.typesetPromise();
 }
 
 function handleAnswer(selected, correct, button, questionElement) {
